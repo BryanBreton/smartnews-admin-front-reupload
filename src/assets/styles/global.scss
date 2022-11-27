@@ -1,0 +1,21 @@
+@import "@/assets/styles/const.scss";
+  
+  .buttons--irisColor {
+    color: #17a2b8 !important;
+  }
+  
+  .buttons--irisColor:hover {
+    border-color: #17a2b8 !important;
+    background-color: #17a2b8 !important;
+    color: #fff !important;
+  }
+
+  .buttons--selected {
+    border-color: #17a2b8 !important;
+    background-color: #17a2b8 !important;
+    color: #fff !important;
+  }
+  .buttons--selected:hover {
+    color: #17a2b8 !important;
+  }
+  

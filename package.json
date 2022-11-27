@@ -1,0 +1,92 @@
+{
+  "name": "smartnews-admin-front",
+  "version": "0.1.0-0",
+  "private": false,
+  "description": "Formulaire de saisie Vue-JS ; permet de saisir des champs qui alimente un Google Sheet",
+  "author": "U IRIS",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "serve:pwa": "vue-cli-service build --mode pwa && http-server ./dist -a 0.0.0.0",
+    "build": "vue-cli-service build",
+    "test:unit": "jest --collect-coverage",
+    "test:no-coverage": "jest",
+    "lint": "vue-cli-service lint --no-fix --ignore-path .gitignore",
+    "lint:fix": "vue-cli-service lint --ignore-path .gitignore",
+    "cy:open": "cypress open -P .",
+    "test:smoke": "cypress run -P . -s **/smoke/*.js -b chrome",
+    "test:integration": "cypress run -P . --config video=false --spec '**/integration/*.js' -b chrome",
+    "pwa:icons": "vue-asset-generate -a ./src/assets/logo.png --no-manifest"
+  },
+  "files": [
+    "dist/",
+    "httpd"
+  ],
+  "dependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@mdi/font": "^4.7.95",
+    "@u-iris/iris-common-test-utils": "3.0.3-0",
+    "@u-iris/iris-front-ui": "^1.0.3",
+    "@u-iris/u-iris-front-security": "^1.0.2",
+    "@vue/composition-api": "^1.7.0",
+    "axios": "^0.19.0",
+    "core-js": "^2.6.12",
+    "iris-common": "^1.0.4-0",
+    "jest": "^24.9.0",
+    "jest-html-reporter": "^3.1.3",
+    "lodash": "^4.17.11",
+    "mobile-detect": "^1.4.4",
+    "moment": "^2.24.0",
+    "register-service-worker": "^1.7.1",
+    "vue": "^2.6.12",
+    "vue-i18n": "^8.24.3",
+    "vue-offline": "^2.0.8",
+    "vue-router": "^3.4.9",
+    "vuetify": "^2.4.2",
+    "vuex": "^3.6.0"
+  },
+  "devDependencies": {
+    "@cypress/code-coverage": "^3.8.8",
+    "@vue/cli-plugin-babel": "^3.4.0",
+    "@vue/cli-plugin-eslint": "^3.4.0",
+    "@vue/cli-plugin-pwa": "^4.5.10",
+    "@vue/cli-plugin-unit-jest": "^3.4.0",
+    "@vue/cli-service": "^3.4.0",
+    "@vue/eslint-config-prettier": "^4.0.1",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "babel-plugin-istanbul": "^6.0.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "file-loader": "^1.1.11",
+    "http-server": "^0.12.3",
+    "jest-when": "^2.8.1",
+    "sass": "^1.32.2",
+    "sass-loader": "^7.1.0",
+    "vue-cli-plugin-vuetify": "^2.0.9",
+    "vue-template-compiler": "^2.6.12",
+    "vuetify-loader": "^1.3.0",
+    "iris-front-test-utils": "^1.0.1",
+    "jest-sonar": "^0.2.11"
+  },
+  "bugs": {
+    "url": "https://github.com/ugieiris/smartnews-admin-front/issues"
+  },
+  "homepage": "https://github.com/ugieiris/smartnews-admin-front#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ugieiris/smartnews-admin-front"
+  },
+  "nyc": {
+    "report-dir": "coverage_TI",
+    "reporter": [
+      "text",
+      "html",
+      "cobertura",
+      "lcov"
+    ]
+  }
+}

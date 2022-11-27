@@ -1,0 +1,6 @@
+{
+  "name": "smartnews-admin-front",
+  "applicationType": "spa",
+  "internet": false,
+  "intranet": false
+}
